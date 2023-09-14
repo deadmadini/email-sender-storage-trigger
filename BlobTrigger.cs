@@ -26,7 +26,7 @@ namespace EmailSenderStorageTrigger
 
                 EmailSender.SendSASToken(SasTokenGenerator.GenerateSasToken(name), email);
 
-                log.LogInformation($"SAS token was successfully sent to {email}";
+                log.LogInformation($"SAS token was successfully sent to {email}");
             }
             catch (Exception ex)
             {
