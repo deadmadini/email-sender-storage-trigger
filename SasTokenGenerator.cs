@@ -26,7 +26,7 @@ namespace EmailSenderStorageTrigger
 
                 blobSasBuilder.SetPermissions(BlobSasPermissions.Read);
                 string sasToken = blobSasBuilder.ToSasQueryParameters(new Azure.Storage.StorageSharedKeyCredential(azureStorageAccount, azureStorageAccessKey)).ToString();
-                return $"https://{azureStorageAccount}.blob.core.windows.net/{blobContainer}/" + sasToken;
+                return $"https://{azureStorageAccount}.blob.core.windows.net/{blobContainer}/{fileName}?" + sasToken;
             }
             catch(Exception)
             {
