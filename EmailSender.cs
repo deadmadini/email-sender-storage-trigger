@@ -20,9 +20,9 @@ namespace EmailSenderStorageTrigger
             message.Subject = "Link to the uploaded file";
             message.To.Add(receiver);
             message.Body = "<html><body>" +
-                "<h2>Link to the upploaded file<h2>" +
-                $"Your file was successully uploaded to the BLOB storage. To get access to your file, use the next link: <br>{link}." +
-                $"This link is available for only one hour." +
+                "<h2>Link to the upploaded file</h2>" +
+                $"<p>Your file was successully uploaded to the BLOB storage. To get access to your file, use the next link: <br>{link}." +
+                $"<br>This link is available for only one hour.</p>" +
                 "</body></html>";
             message.IsBodyHtml = true;
 
